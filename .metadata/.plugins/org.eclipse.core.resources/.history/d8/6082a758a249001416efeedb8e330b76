@@ -1,0 +1,37 @@
+var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
+
+var success = function(){
+	alert("Here is your data!");
+	var getData = JSON.parse(this.responseText);
+
+
+var temp = getData.current_observation.temp_f;
+
+var tempLabel = Ti.UI.createLabel({
+	text: temp,
+	font: {fontSize: "19"},
+	top: 225,
+	textAlign: "center"
+});
+
+};
+
+var error = function(){
+	alert("Oops, something went wrong!");
+};
+
+
+var client = Ti.Network.createHTTPClient({
+	onload: success,
+	onerror: error,
+	timeout: 5000
+});
+
+var app = require("app");
+
+exports.temp = temp;
+exports.tempLabel = tempLabel;
+
+client.open("GET", url);
+
+client.send();

@@ -1,0 +1,23 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	background: "sunbackground.png"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+
+
+
+
+
+
+
+
+
+
+var getData = require("data");
+
+navWindow.add(mainWin);
+navWindow.open();

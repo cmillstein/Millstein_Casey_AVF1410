@@ -1,0 +1,51 @@
+var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
+
+var success = function(){
+	alert("Here is your data!");
+	var getData = JSON.parse(this.responseText);
+
+
+var temp = getData.current_observation.temp_f;
+
+var wind = getData.current_observation.wind_string;
+
+
+var tempLabel = Ti.UI.createLabel({
+	text: temp + "°F",
+	font: {fontSize: "25", fontWeight: "bold"},
+	left: 125,
+	top: 285,
+	textAlign: "center"
+});
+
+var windLabel = Ti.UI.createLabel({
+	text: "The wind is currently heading " + wind,
+	font: {fontSize: "12", fontWeight: "bold"},
+	right: 0,
+	left: 125,
+	top: 325,
+	textAlign: "center"
+});
+
+ 
+
+mainWin.add(tempLabel);
+mainWin.add(windLabel);
+};
+
+var error = function(){
+	alert("Oops, something went wrong!");
+};
+
+
+var client = Ti.Network.createHTTPClient({
+	onload: success,
+	onerror: error,
+	timeout: 5000
+});
+
+
+
+client.open("GET", url);
+
+client.send();

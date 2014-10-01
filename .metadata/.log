@@ -99,3 +99,69 @@ java.lang.NullPointerException
 	at com.appcelerator.titanium.ios.core.IOSSDKLocator.access$0(IOSSDKLocator.java:145)
 	at com.appcelerator.titanium.ios.core.IOSSDKLocator$1.run(IOSSDKLocator.java:165)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2014-10-01 15:12:51.038 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/caseymillstein/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/caseymillstein/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-01 15:12:53.634
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-10-01 15:12:53.780
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-01 15:12:53.781
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-01 15:12:53.781
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY org.eclipse.jface.text 4 0 2014-10-01 15:39:32.206
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.IllegalArgumentException: module namespace root must be a directory
+	at com.aptana.js.core.inferencing.CommonJSResolver.resolve(CommonJSResolver.java:31)
+	at com.aptana.js.core.inferencing.RequireResolverFactory.resolve(RequireResolverFactory.java:152)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.resolve(JSNodeTypeInferrer.java:839)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:780)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:635)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:375)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:436)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:689)
+	at com.aptana.js.core.parsing.ast.JSIdentifierNode.accept(JSIdentifierNode.java:33)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.editor.js.contentassist.ParseUtil.getReceiverTypeNames(ParseUtil.java:451)
+	at com.aptana.editor.js.internal.JSModelUtil.getProperties(JSModelUtil.java:58)
+	at com.aptana.editor.js.text.JSTextHover.getHoverInfo2(JSTextHover.java:71)
+	at com.aptana.editor.common.CommonSourceViewerConfiguration$TextHover.getHoverInfo2(CommonSourceViewerConfiguration.java:674)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY com.appcelerator.titanium.android.core 4 0 2014-10-01 16:12:46.612
+!MESSAGE There are no Android devices connected
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.958
+!MESSAGE NLS unused message: MobileUIPlugin_DefaultProjectTemplate_Description in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.959
+!MESSAGE NLS unused message: MobileUIPlugin_DefaultProjectTemplate_Name in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.959
+!MESSAGE NLS unused message: MobileUIPlugin_mobileUIInitializationJobName in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.959
+!MESSAGE NLS unused message: AdhocHandler_sdk_compatibility_title in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.959
+!MESSAGE NLS unused message: DistributeWizard_ErrorDialogTitle in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.959
+!MESSAGE NLS unused message: DistributeWizard_LaunchConfigurationFailed_Error in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.959
+!MESSAGE NLS unused message: IOSConfigurationMessages_TestOnDevice_Desc in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.960
+!MESSAGE NLS unused message: IOSConfigurationMessages_TestOnDevice_Title in: com.appcelerator.titanium.ios.ui.messages

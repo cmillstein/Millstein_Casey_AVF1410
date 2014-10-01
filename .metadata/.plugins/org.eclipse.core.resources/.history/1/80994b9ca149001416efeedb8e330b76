@@ -1,0 +1,30 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundImage: "sunbackground.png",
+	top: 0,
+	width: 485,
+	left: 0
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+var currentWeather = Ti.UI.createLabel({
+	text: "Here are your current conditions",
+	top: 150
+});
+
+
+
+
+
+
+
+
+
+var getData = require("data");
+
+mainWin.add(currentWeather);
+navWindow.add(mainWin);
+navWindow.open();
