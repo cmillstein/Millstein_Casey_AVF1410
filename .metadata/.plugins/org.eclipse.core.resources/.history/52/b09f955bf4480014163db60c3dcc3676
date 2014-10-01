@@ -1,0 +1,40 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundColor: "#000099"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+var clickHere = Ti.UI.createLabel({
+	text: "Click here to connect!",
+	textAlign: "center",
+	font: {fontSize: 18, fontWeight: "bold"},
+	borderColor: "#000",
+	borderWidth: 3,
+	height: 80,
+	width: 250,
+	backgroundColor: "#EEE"
+});
+
+var url = "https://api.wunderground.com";
+
+clickHere.addEventListener("click", function(){
+	var client = Ti.Network.createHTTPClient({
+	onload: success,
+	onerror: error,
+	timeout: 5000
+});
+	var error = function(){
+	alert("Oops, something went wrong!");
+};
+
+});
+
+
+client.open("GET". url);
+client.send();
+
+navWindow.add(mainWin, clickHere);
+navWindow.open();

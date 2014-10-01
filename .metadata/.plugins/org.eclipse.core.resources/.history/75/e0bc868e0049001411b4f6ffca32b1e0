@@ -1,0 +1,20 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundColor: "#000099"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+
+var url = "https://api.wunderground.com";
+
+
+
+
+client.open("GET". url);
+client.send();
+
+navWindow.add(mainWin);
+navWindow.open();

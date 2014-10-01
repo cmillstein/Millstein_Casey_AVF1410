@@ -1,64 +1,46 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
-
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
-
-
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundColor: "#EEE"
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
 });
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+var forecast = Ti.UI.createLabel({
+	text: "Todays Forecast",
+	textAlign: "center",
+	font: {fontSize: "17", fontWeight: "bold"},
+	borderColor: "#000",
+	borderWidth: 2,
+	backgroundColor: "#B0B0B0",
+	height: 70,
+	left: 0,
+	right: 0,
+	top: 145
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var sunPicture = Ti.UI.createImageView({
+	image: "suncloud.png",
+	left: -80
 });
 
-win2.add(label2);
+
+var forecastInfo = Ti.UI.createWindow({
+    
+});
+
+forecast.add(sunPicture);
+
+forecast.addEventListener("click", function(){
+	navWindow.openWindow(forecastInfo);
+});
 
 
 
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
 
+var getData = require("data");
 
-// open tab group
-tabGroup.open();
+mainWin.add(forecast);
+navWindow.add(mainWin);
+navWindow.open();

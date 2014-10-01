@@ -1,0 +1,12 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundColor: "#000099"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+
+navWindow.add(mainWin);
+navWindow.open();

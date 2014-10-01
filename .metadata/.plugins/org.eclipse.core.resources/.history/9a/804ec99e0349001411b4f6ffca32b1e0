@@ -1,0 +1,31 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundColor: "#EEE"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+
+var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
+
+
+
+var error = function(){
+	alert("Oops, something went wrong!");
+};
+
+
+var client = Ti.Network.createHTTPClient({
+
+	onerror: error,
+	timeout: 5000
+});
+
+client.open("GET", url);
+
+client.send();
+
+navWindow.add(mainWin);
+navWindow.open();
