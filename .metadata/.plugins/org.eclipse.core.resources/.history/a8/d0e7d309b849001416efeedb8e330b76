@@ -15,19 +15,12 @@ var currentWeather = Ti.UI.createLabel({
 	font: {fontSize: "17"}
 });
 
-var scrollView = Ti.UI.createScrollView({
-  contentWidth: 'auto',
-  contentHeight: 'auto',
-  showVerticalScrollIndicator: true,
-  showHorizontalScrollIndicator: true,
-  height: '100%',
-  width: '100%'
-});
+
 
 
 
 
 var data = require("data");
-scrollView.add(currentWeather);
-mainWin.add(scrollView);
+
+mainWin.add(currentWeather);
 mainWin.open();

@@ -165,3 +165,6 @@ java.lang.IllegalArgumentException: module namespace root must be a directory
 
 !ENTRY org.eclipse.osgi 2 1 2014-10-01 16:14:12.960
 !MESSAGE NLS unused message: IOSConfigurationMessages_TestOnDevice_Title in: com.appcelerator.titanium.ios.ui.messages
+
+!ENTRY com.appcelerator.titanium.android.core 4 0 2014-10-01 18:07:10.920
+!MESSAGE There are no Android devices connected
