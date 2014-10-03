@@ -19,7 +19,7 @@ var locationLabel = Ti.UI.createLabel({
 
 var tempLabel = Ti.UI.createLabel({
 	text: temp + "°F",
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "24", fontWeight: "bold"},
 	color: "#000000",
 	top: "60%",
 	textAlign: "center"
@@ -27,14 +27,14 @@ var tempLabel = Ti.UI.createLabel({
 
 var windLabel = Ti.UI.createLabel({
 	text: "The wind is currently heading \n" + wind,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "24", fontWeight: "bold"},
 	color: "#000000",
 	top: "70%",
 });
 
 var weatherLabel = Ti.UI.createLabel({
 	text: weatherConditions,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "24", fontWeight: "bold"},
 	color: "#000000",
 	top: "80%",
 	textAlign: "center"
@@ -42,7 +42,7 @@ var weatherLabel = Ti.UI.createLabel({
 
 var heatIndexLabel = Ti.UI.createLabel({
 	text: "The heat index for today is \n" + heatIndex,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "24", fontWeight: "bold"},
 	color: "#000000",
 	top: "90%",
 	textAlign: "center"
