@@ -1,7 +1,7 @@
 var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
 
 var success = function(){
-	//alert("Here is your data!");
+	alert("Here is your data!");
 	var getData = JSON.parse(this.responseText);
 
 var location = getData.current_observation.display_location.full;
