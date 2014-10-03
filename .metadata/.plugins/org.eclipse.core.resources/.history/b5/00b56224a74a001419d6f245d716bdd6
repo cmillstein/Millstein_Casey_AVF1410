@@ -1,10 +1,14 @@
 var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
 
 var success = function(){
-	//alert("Here is your data!"); decided not to use alert, got annoying
+	//alert("Here is your data!");
 	var getData = JSON.parse(this.responseText);
 
 var location = getData.current_observation.display_location.full;
+var temp = getData.current_observation.temp_f;
+var wind = getData.current_observation.wind_string;
+var weatherConditions = getData.current_observation.weather;
+var heatIndex = getData.current_observation.heat_index_f;
 
 var locationLabel = Ti.UI.createLabel({
 	text: location,
@@ -12,8 +16,6 @@ var locationLabel = Ti.UI.createLabel({
 	color: "#000000",
 	top: "50%",
 });
-
-var temp = getData.current_observation.temp_f;
 
 var tempLabel = Ti.UI.createLabel({
 	text: temp + "°F",
@@ -23,16 +25,12 @@ var tempLabel = Ti.UI.createLabel({
 	textAlign: "center"
 });
 
-var wind = getData.current_observation.wind_string;
-
 var windLabel = Ti.UI.createLabel({
 	text: "The wind is currently heading \n" + wind,
 	font: {fontSize: "16dp", fontWeight: "bold"},
 	color: "#000000",
 	top: "70%",
 });
-
-var weatherConditions = getData.current_observation.weather;
 
 var weatherLabel = Ti.UI.createLabel({
 	text: weatherConditions,
@@ -41,9 +39,6 @@ var weatherLabel = Ti.UI.createLabel({
 	top: "80%",
 	textAlign: "center"
 });
-
-
-var heatIndex = getData.current_observation.heat_index_f;
 
 var heatIndexLabel = Ti.UI.createLabel({
 	text: "The heat index for today is \n" + heatIndex,
