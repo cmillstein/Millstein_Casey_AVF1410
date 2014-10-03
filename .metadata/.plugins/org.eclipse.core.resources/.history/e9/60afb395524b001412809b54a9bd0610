@@ -1,22 +1,26 @@
 var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
 
-//geolocation
-if (Ti.Geolocation.locationServicesEnabled) {
-    Ti.Geolocation.purpose = 'Get Current Location';
-    Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
-    Ti.Geolocation.distanceFilter = 10;
-    Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
+var geoLocation = function(){
+	Ti.Geolocation.purpose = "Your location is needed to gather lat/long coords."; 
+	Ti.Geolocation.getCurrentPosition(function(e){
+		var latitude = e.coords.latitude;
+		var longitude = e.coords.longitude;
+		var coordsLabel = Ti.UI.createLabel({
+			color: '#fff',
+			text: 'Latitude: ' + lat + ', Longitude: ' + lng,
+			height: Ti.UI.SIZE,
+			textAlign: 'center',
+			font: {
+				fontSize: '20dp',
+				fontWeight: 'bold'
+			}
+		});
+		myView.add(coordsLabel);  //myView would be a reference from app.js perhaps
+	}); //getCurrentPosition closing
+}; //runGeo closing
+exports.geoLocation = runGeoCode;
 
-    Ti.Geolocation.addEventListener('location', function(e) {
-        if (e.error) {
-            alert('Error: ' + e.error);
-        } else {
-            Ti.API.info(e.coords);
-        }
-    });
-} else {
-    alert('Please enable location services');
-}
+
 
 
 

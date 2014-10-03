@@ -1,6 +1,5 @@
 var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
 
-//geolocation
 if (Ti.Geolocation.locationServicesEnabled) {
     Ti.Geolocation.purpose = 'Get Current Location';
     Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
@@ -17,6 +16,9 @@ if (Ti.Geolocation.locationServicesEnabled) {
 } else {
     alert('Please enable location services');
 }
+
+
+
 
 
 
