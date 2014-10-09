@@ -1,10 +1,12 @@
 =run
 Android\ Emulator\ Process\:ConsoleLogLevel=Info
-LAST_LAUNCH_TIMESTAMP=1412377659203
+LAST_LAUNCH_TIMESTAMP=1412815132090
 Millstein_Casey_Project1\:launchMode=run
 Millstein_Casey_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.run.device.launchShortcut.0a05c35b2b8cf7c5e735f1d0f9ed5f1745ea624c
 Millstein_Casey_Project1IPAD\:launchMode=run
 Millstein_Casey_Project1IPAD\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.iPad Retina (64-bit)
+Millstein_Casey_Project2\:launchMode=run
+Millstein_Casey_Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.iPad Retina (64-bit)
 PROJECT\ ONE\ BACKUP\:launchMode=run
 PROJECT\ ONE\ BACKUP\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.run.device.launchShortcut.0a05c35b2b8cf7c5e735f1d0f9ed5f1745ea624c
 eclipse.preferences.version=1

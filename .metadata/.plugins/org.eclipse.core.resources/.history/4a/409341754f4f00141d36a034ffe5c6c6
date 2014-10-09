@@ -1,0 +1,32 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundImage: "background.png"
+});
+
+var cloud = require("cloud");
+var data = require("data");
+
+
+var username = Ti.UI.createTextField({
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+  color: '#336699',
+  hintText: "Username",
+  top: "40%",
+  width: "40%",
+  clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
+  clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ALWAYS
+});
+
+var password = Ti.UI.createTextField({
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+  color: '#336699',
+  width: "40%",
+  hintText: "Password",
+  clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
+  clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ALWAYS
+  
+});
+
+
+
+mainWin.add(username, password);
+mainWin.open();

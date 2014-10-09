@@ -3,6 +3,7 @@ var mainWin = Ti.UI.createWindow({
 	backgroundImage: "sunbackground.png",
 });
 
+var data = require("data");
 
 var currentWeather = Ti.UI.createLabel({
 	text: "Here are your current conditions",
@@ -12,11 +13,57 @@ var currentWeather = Ti.UI.createLabel({
 	font: {fontSize: "18dp"}
 });
 
+var locationLabel = Ti.UI.createLabel({
+	text: data.location,
+	font: {fontSize: "24dp", fontWeight: "bold"},
+	color: "#000000",
+	top: "50%",
+});
+
+var tempLabel = Ti.UI.createLabel({
+	text: data.temp + "°F",
+	font: {fontSize: "16dp", fontWeight: "bold"},
+	color: "#000000",
+	top: "60%",
+	textAlign: "center"
+});
+
+
+var windLabel = Ti.UI.createLabel({
+	text: "The wind is currently heading \n" + data.wind,
+	font: {fontSize: "16dp", fontWeight: "bold"},
+	color: "#000000",
+	top: "70%",
+});
+
+var weatherLabel = Ti.UI.createLabel({
+	text: data.weatherConditions,
+	font: {fontSize: "16dp", fontWeight: "bold"},
+	color: "#000000",
+	top: "80%",
+	textAlign: "center"
+});
+
+var heatIndexLabel = Ti.UI.createLabel({
+	text: "The heat index for today is \n" + data.heatIndex,
+	font: {fontSize: "16dp", fontWeight: "bold"},
+	color: "#000000",
+	top: "90%",
+	textAlign: "center"
+
+});
 
 
 
 
-var data = require("data");
+
+mainWin.add(heatIndexLabel);
+mainWin.add(tempLabel);
+mainWin.add(windLabel);
+mainWin.add(weatherLabel);
+mainWin.add(locationLabel);
+
+
 
 mainWin.add(currentWeather);
 mainWin.open();

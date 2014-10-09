@@ -1,0 +1,10 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundImage: "background.png"
+});
+
+
+
+
+
+
+mainWin.open();

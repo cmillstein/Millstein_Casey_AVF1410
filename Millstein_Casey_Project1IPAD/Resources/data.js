@@ -18,9 +18,7 @@ if (Ti.Geolocation.locationServicesEnabled) {
     alert('Please enable location services');
 }
 
-
-
-
+var app = require('app');
 
 
 
@@ -30,61 +28,27 @@ var success = function(){
 
 var location = getData.current_observation.display_location.full;
 
-var locationLabel = Ti.UI.createLabel({
-	text: location,
-	font: {fontSize: "24dp", fontWeight: "bold"},
-	color: "#000000",
-	top: "50%",
-});
 
 var temp = getData.current_observation.temp_f;
 
-var tempLabel = Ti.UI.createLabel({
-	text: temp + "°F",
-	font: {fontSize: "16dp", fontWeight: "bold"},
-	color: "#000000",
-	top: "60%",
-	textAlign: "center"
-});
 
 var wind = getData.current_observation.wind_string;
 
-var windLabel = Ti.UI.createLabel({
-	text: "The wind is currently heading \n" + wind,
-	font: {fontSize: "16dp", fontWeight: "bold"},
-	color: "#000000",
-	top: "70%",
-});
 
 var weatherConditions = getData.current_observation.weather;
-
-var weatherLabel = Ti.UI.createLabel({
-	text: weatherConditions,
-	font: {fontSize: "16dp", fontWeight: "bold"},
-	color: "#000000",
-	top: "80%",
-	textAlign: "center"
-});
 
 
 var heatIndex = getData.current_observation.heat_index_f;
 
-var heatIndexLabel = Ti.UI.createLabel({
-	text: "The heat index for today is \n" + heatIndex,
-	font: {fontSize: "16dp", fontWeight: "bold"},
-	color: "#000000",
-	top: "90%",
-	textAlign: "center"
+exports.location = location;
+exports.temp = temp;
+exports.wind = wind;
+exports.weatherConditions = weatherConditions;
+exports.heatIndex = heatIndex;
 
-});
-
- 
-mainWin.add(heatIndexLabel);
-mainWin.add(tempLabel);
-mainWin.add(windLabel);
-mainWin.add(weatherLabel);
-mainWin.add(locationLabel);
 };
+
+
 
 var error = function(){
 	alert("Oops, something went wrong!");

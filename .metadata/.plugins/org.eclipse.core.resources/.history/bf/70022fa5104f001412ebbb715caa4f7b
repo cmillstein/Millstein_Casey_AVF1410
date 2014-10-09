@@ -1,0 +1,10 @@
+var mainWin = createWindow({
+	background: "background.png"
+});
+
+
+
+
+
+
+mainWin.open();

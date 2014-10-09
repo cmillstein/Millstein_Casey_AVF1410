@@ -1,0 +1,13 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundImage: "background.png"
+});
+
+var cloud = require("cloud");
+var data = require("data");
+
+
+
+
+
+
+mainWin.open();

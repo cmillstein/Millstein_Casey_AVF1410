@@ -1,0 +1,5 @@
+//local storage
+var app = require("app");
+
+Ti.Database.install("database/weather.sqlite", "weatherInfo");
+
