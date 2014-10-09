@@ -18,8 +18,6 @@ if (Ti.Geolocation.locationServicesEnabled) {
     alert('Please enable location services');
 }
 
-var app = require('app');
-
 
 
 var success = function(){
