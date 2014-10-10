@@ -13,26 +13,6 @@ var currentWeather = Ti.UI.createLabel({
 	font: {fontSize: "18dp"}
 });
 
-setTimeout(function(){
-	tempLabel.setText(data.temp + "°F");
-	}, 5000);
-	
-setTimeout(function(){
-	locationLabel.setText(data.location);
-	}, 5000);
-	
-setTimeout(function(){
-	windLabel.setText("The wind is currently heading \n" + data.wind);
-	}, 5000);
-	
-setTimeout(function(){
-	weatherLabel.setText(data.weatherConditions);
-	}, 5000);
-	
-setTimeout(function(){
-	heatIndexLabel.setText("The heat index for today is \n" + data.heatIndex);
-	}, 5000);
-
 var locationLabel = Ti.UI.createLabel({
 	text: data.location,
 	font: {fontSize: "24dp", fontWeight: "bold"},
