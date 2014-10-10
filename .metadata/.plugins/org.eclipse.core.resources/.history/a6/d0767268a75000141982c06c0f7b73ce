@@ -1,6 +1,6 @@
 var mainWin = Ti.UI.createWindow({
 	title: "Welcome!",
-	backgroundColor: "#38B0DE"
+	backgroundImage: "background.png"
 });
 
 
@@ -22,24 +22,10 @@ var wunderground = Ti.UI.createImageView({
 });
 
 setTimeout(function(){
-	tempLabel.setText(data.temp + "°F");
+	tempLabel.setText(data.location);
 	}, 5000);
 	
-setTimeout(function(){
-	locationLabel.setText(data.location);
-	}, 5000);
-	
-setTimeout(function(){
-	windLabel.setText("The wind is currently heading \n" + data.wind);
-	}, 5000);
-	
-setTimeout(function(){
-	weatherLabel.setText(data.weatherConditions);
-	}, 5000);
-	
-setTimeout(function(){
-	heatIndexLabel.setText("The heat index for today is \n" + data.heatIndex);
-	}, 5000);
+
 
 var currentWeather = Ti.UI.createLabel({
 	text: "Here are your current conditions",
@@ -89,12 +75,11 @@ var heatIndexLabel = Ti.UI.createLabel({
 
 });
 
-mainWin.add(locationLabel);
 mainWin.add(heatIndexLabel);
 mainWin.add(tempLabel);
 mainWin.add(windLabel);
 mainWin.add(weatherLabel);
-
+mainWin.add(locationLabel);
 
 
 

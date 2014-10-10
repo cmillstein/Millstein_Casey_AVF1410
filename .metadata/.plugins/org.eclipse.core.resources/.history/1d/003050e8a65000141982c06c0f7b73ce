@@ -20,8 +20,6 @@ if (Ti.Geolocation.locationServicesEnabled) {
 var url = "http://api.wunderground.com/api/4c3684666a48c28f/conditions/q/FL/Coconut_Creek.json";
 
 
-
-
 var success = function(){
 	var getData = JSON.parse(this.responseText);
 	
@@ -39,7 +37,7 @@ var weatherConditions = getData.current_observation.weather;
 
 var heatIndex = getData.current_observation.heat_index_f;
 
-exports.location = location;
+exports.lct = location;
 exports.temp = temp;
 exports.wind = wind;
 exports.weatherConditions = weatherConditions;

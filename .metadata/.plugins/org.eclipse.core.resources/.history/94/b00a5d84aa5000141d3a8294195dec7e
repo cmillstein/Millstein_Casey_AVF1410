@@ -24,9 +24,9 @@ var loginUser = function(){
 }; 
 loginUser();
 
-var cameraWork = function(image){
+var cameraWork = function(){
 	Cloud.Photos.create({
-	   	 photo: image
+	   	 photo: e.media
 			}, function (e) {
 	    		if (e.success) {
 	        var photo = e.photos[0];

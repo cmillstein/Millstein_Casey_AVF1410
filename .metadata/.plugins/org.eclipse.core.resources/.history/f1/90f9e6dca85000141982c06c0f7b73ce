@@ -8,7 +8,6 @@ var picButton = Ti.UI.createImageView({
 	
 }); 
 
-
 picButton.addEventListener('click', function(e){
 	Ti.Media.showCamera({
 		saveToPhotoGallery: true,
@@ -22,7 +21,6 @@ picButton.addEventListener('click', function(e){
 					image: e.media
 				});
 				win.add(img);
-				cloud.cameraWork(e.media);
 			} else {
 				alert("thought this was a photo but, it's:" + e.mediaType);
 			}
@@ -35,7 +33,6 @@ picButton.addEventListener('click', function(e){
 			}
 		}
 	}); //closing showCamera
-	
 }); //closing takePicBtn
 
 mainWin.add(picButton);

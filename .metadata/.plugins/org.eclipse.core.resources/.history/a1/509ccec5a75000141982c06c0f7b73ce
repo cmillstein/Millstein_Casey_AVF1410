@@ -1,6 +1,6 @@
 var mainWin = Ti.UI.createWindow({
 	title: "Welcome!",
-	backgroundColor: "#38B0DE"
+	backgroundImage: "background.png"
 });
 
 
@@ -30,15 +30,7 @@ setTimeout(function(){
 	}, 5000);
 	
 setTimeout(function(){
-	windLabel.setText("The wind is currently heading \n" + data.wind);
-	}, 5000);
-	
-setTimeout(function(){
-	weatherLabel.setText(data.weatherConditions);
-	}, 5000);
-	
-setTimeout(function(){
-	heatIndexLabel.setText("The heat index for today is \n" + data.heatIndex);
+	windLabel.setText(The wind is currently heading \n" + data.wind,);
 	}, 5000);
 
 var currentWeather = Ti.UI.createLabel({

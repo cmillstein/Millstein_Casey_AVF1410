@@ -39,7 +39,7 @@ var weatherConditions = getData.current_observation.weather;
 
 var heatIndex = getData.current_observation.heat_index_f;
 
-exports.location = location;
+exports.lct = location;
 exports.temp = temp;
 exports.wind = wind;
 exports.weatherConditions = weatherConditions;

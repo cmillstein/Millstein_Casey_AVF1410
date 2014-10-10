@@ -1,6 +1,6 @@
 var mainWin = Ti.UI.createWindow({
 	title: "Welcome!",
-	backgroundImage: "sunbackground.png",
+	backgroundColor: "#ffffff",
 	width: "100%",
 	
 });

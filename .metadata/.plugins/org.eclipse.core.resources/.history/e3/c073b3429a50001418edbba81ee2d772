@@ -1,0 +1,22 @@
+var compassButton = Ti.UI.createLabel({
+	text: "Click Me",
+	top: "85%",
+	right: "0%"
+});
+
+
+var runCompass = Ti.Geolocation.getCurrentHeading(function(e){
+	var trueHeading = e.heading.trueHeading;
+	var compassLabel = Ti.UI.createLabel({
+		color: '#fff',
+		text: 'True Heading: ' + trueHeading,
+		height: Ti.UI.SIZE,
+		textAlign: 'center',
+		font: {
+			fontSize: '20dp',
+			fontWeight: 'bold'
+		}
+	});
+	mainWin.add(compassLabel);
+});
+Ti.Geolocation.addEventListener('heading', runCompass);
