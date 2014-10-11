@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-secret-development" type="string">C923RdXwBOh3wFYXqYI2DB5vS7jC4SqB</property>
-    <property name="acs-oauth-key-development" type="string">ruUuYTNdHi1vKpn1vFtCkUTNPTfuilsB</property>
-    <property name="acs-api-key-development" type="string">47X8zEjr3YLmd1b6UdRdAePzr0HMnnaL</property>
-    <property name="acs-oauth-secret-production" type="string">xQq50xEhm81Mu1VdWxBhlw8IgUvaRIdB</property>
-    <property name="acs-oauth-key-production" type="string">h22Ogf6qzPPggryafkJp78GMgF8MCALV</property>
+    <property name="acs-api-key-development" type="string">47X8zEjr3YLmd1b6UdRdAePzr0HMnnaL</property> 
     <property name="acs-api-key-production" type="string">FV0C5w1Ry5F1ZyuNJnpU8LPsZOoE2JVa</property>
     <id>com.fullsail.demoApp</id>
     <name>Millstein_Casey_Project2</name>

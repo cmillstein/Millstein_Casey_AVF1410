@@ -1,7 +1,3 @@
-var adminID = "543572ee1011a40877009710";
-
-
-
 
 var Cloud = require('ti.cloud');
 Cloud.debug = true;

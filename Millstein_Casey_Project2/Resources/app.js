@@ -13,12 +13,12 @@ var camera = require("camera");
 var hostedBy = Ti.UI.createLabel({
 	text: "Hosted By",
 	font: {fontSize: "13dp"},
-	top: "15%"
+	top: "10%"
 });
 
 var wunderground = Ti.UI.createImageView({
 	image: "wundergound.png",
-	top: "18%"
+	top: "13%"
 });
 
 setTimeout(function(){
@@ -44,50 +44,52 @@ setTimeout(function(){
 var currentWeather = Ti.UI.createLabel({
 	text: "Here are your current conditions",
 	color: "#000000",
-	top: "28%",
+	top: "23%",
 	textAlign: "center",
-	font: {fontSize: "18dp"}
+	font: {fontSize: "20dp"}
 });
 
 var locationLabel = Ti.UI.createLabel({
 	text: data.location,
-	font: {fontSize: "24dp", fontWeight: "bold"},
+	font: {fontSize: "28dp", fontWeight: "bold"},
 	color: "#000000",
-	top: "39%",
+	top: "34%",
 });
 
 var tempLabel = Ti.UI.createLabel({
 	text: data.temp + "°F",
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "24dp", fontWeight: "bold"},
 	color: "#000000",
-	top: "45%",
+	top: "40%",
 	textAlign: "center"
 });
 
 
 var windLabel = Ti.UI.createLabel({
 	text: "The wind is currently heading \n" + data.wind,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "20dp", fontWeight: "bold"},
 	color: "#000000",
-	top: "55%",
+	top: "50%",
 });
 
 var weatherLabel = Ti.UI.createLabel({
 	text: data.weatherConditions,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "20dp", fontWeight: "bold"},
 	color: "#000000",
-	top: "65%",
+	top: "62%",
 	textAlign: "center"
 });
 
 var heatIndexLabel = Ti.UI.createLabel({
 	text: "The heat index for today is \n" + data.heatIndex,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "20dp", fontWeight: "bold"},
 	color: "#000000",
-	top: "75%",
+	top: "70%",
 	textAlign: "center"
 
 });
+
+
 
 mainWin.add(locationLabel);
 mainWin.add(heatIndexLabel);
