@@ -1,0 +1,12 @@
+var app = require("app");
+
+var dayOne = Ti.UI.createLabel({
+	backgroundImage: "blurred.png",
+	borderColor: "#000",
+	borderWidth: 3,
+	width: "28%",
+	height: "55%"
+});
+
+
+mainWin.add(dayOne);

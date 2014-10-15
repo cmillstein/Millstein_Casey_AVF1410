@@ -1,0 +1,35 @@
+var app = require("app");
+var data = require("data");
+
+
+var dayOne = Ti.UI.createLabel({
+	//backgroundImage: "blurred.png",
+	text: data.icon,
+	borderColor: "#000",
+	borderWidth: 3,
+	width: "28%",
+	height: "55%",
+	left: "25dp"
+});
+
+var dayTwo = Ti.UI.createLabel({
+	//backgroundImage: "blurred.png",
+	borderColor: "#000",
+	borderWidth: 3,
+	width: "28%",
+	height: "55%"
+});
+
+var dayThree = Ti.UI.createLabel({
+	//backgroundImage: "blurred.png"
+	borderColor: "#000",
+	borderWidth: 3,
+	width: "28%",
+	height: "55%",
+	right: "25dp"
+});
+
+
+
+
+mainWin.add(dayOne, dayTwo, dayThree);

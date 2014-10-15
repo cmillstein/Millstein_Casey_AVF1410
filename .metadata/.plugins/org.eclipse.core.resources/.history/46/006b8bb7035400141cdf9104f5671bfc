@@ -1,0 +1,5 @@
+var dayOne = Ti.UI.createLabel({
+	image: "blurred.png",
+	borderColor: "#000",
+	borderWidth: 3,
+});

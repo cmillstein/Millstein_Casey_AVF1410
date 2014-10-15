@@ -1,0 +1,9 @@
+var mainWin = Ti.UI.createWindow({
+	title: "Welcome!",
+	backgroundImage: "weatherbackground.png"
+});
+
+
+
+
+mainWin.open();
