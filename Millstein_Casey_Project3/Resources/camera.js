@@ -5,6 +5,8 @@ var picButton = Ti.UI.createImageView({
 	width: "30%"
 }); 
 
+//PUSH TO CLOUD PHOTOS
+
 picButton.addEventListener('click', function(e){
 	Ti.Media.showCamera({
 		saveToPhotoGallery: true,

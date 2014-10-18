@@ -22,25 +22,7 @@ if (Ti.Geolocation.locationServicesEnabled) {
 }
 
 
-/*
-var image = Ti.UI.createImageView({
-	top: "15%"
-});
-exports.image = image;
 
-var imageTwo = Ti.UI.createImageView({
-	top: "15%"
-});
-exports.imageTwo = imageTwo;
-
-var imageThree = Ti.UI.createImageView({
-	top: "15%"
-});
-exports.imageThree = imageThree;
-
-var weekdayOne = Ti.UI.createLabel({
-
-});*/
 
 
 var dayHolder = Ti.UI.createLabel({
@@ -55,27 +37,23 @@ var dayOptions = {
 	height: "75%",
 	layout: "vertical",
 	top: "10%"
-	// height: "55%",
-	// left: "25dp"
-	
+
 };
 
 var imageOptions = {
-	// top: "15%"
 };
 var dayLabelOptions = {
 	top: "45dp",
-	// width: Ti.UI.SIZE
+	font: {fontWeight: "bold", fontFamily: "Verdana"}
 };
 
-// exports.weekdayOne = weekdayOne;
-
+//array
 var days = [];
 
+// JSON data function (looping through data)
 var success = function(days){
 	var getData = JSON.parse(this.responseText);
 	var dataData = getData.forecast.simpleforecast.forecastday;
-	// alert(dataData.length);
 	for(var i=0; i<dataData.length; i++){
 		var day = Ti.UI.createLabel(dayOptions);
 		var image = Ti.UI.createImageView(imageOptions);
@@ -90,18 +68,15 @@ var success = function(days){
 		highLabel.setText("High: "+ dataData[i].high.fahrenheit);
 		lowLabel.setText("Low: "+ dataData[i].low.fahrenheit);
 		aveWindLabel.setText("Wind: "+ dataData[i].avewind.dir +" @ "+ dataData[i].avewind.mph +" mph");
-		// alert(dataData[i].date.weekday);
 		
-		
+	//ADDING LABELS TO VIEWS	
 		day.add(image);
 		day.add(dayLabel);
 		day.add(conditionsLabel);
 		day.add(highLabel);
 		day.add(lowLabel);
 		day.add(aveWindLabel);
-		// exports.days[i] = day;
 		dayHolder.add(day);
-		// days[i]=day;
 	}
 
 };

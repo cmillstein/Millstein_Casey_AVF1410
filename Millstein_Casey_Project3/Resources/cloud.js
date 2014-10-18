@@ -1,4 +1,4 @@
-
+//CLOUD LOGIN
 var Cloud = require('ti.cloud');
 Cloud.debug = true;
 var loginUser = function(){
@@ -20,6 +20,7 @@ var loginUser = function(){
 }; 
 loginUser();
 
+//CAMERA PUSH TO CLOUD
 var cameraWork = function(image){
 	Cloud.Photos.create({
 	   	 photo: image
