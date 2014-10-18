@@ -1219,3 +1219,122 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/caseymil
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
 !SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 14:28:39.732
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+!SESSION 2014-10-17 16:19:07.564 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/caseymillstein/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/caseymillstein/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-17 16:19:10.214
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-10-17 16:19:10.310
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 16:19:10.310
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 16:19:10.310
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+!SESSION 2014-10-17 18:29:46.254 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/caseymillstein/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/caseymillstein/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-17 18:29:48.572
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-10-17 18:29:48.702
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 18:29:48.702
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 18:29:48.702
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY com.aptana.core 4 0 2014-10-17 18:29:53.872
+!MESSAGE (Build 3.2.3.201404181442) [ERROR]  null
+!STACK 0
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.UNIXProcess.waitFor(UNIXProcess.java:115)
+	at com.aptana.core.util.ProcessUtil.processData(ProcessUtil.java:223)
+	at com.aptana.core.util.ProcessUtil.processData(ProcessUtil.java:187)
+	at com.aptana.core.util.ProcessUtil.runInBackground(ProcessUtil.java:291)
+	at com.aptana.core.util.ProcessUtil.runInBackground(ProcessUtil.java:376)
+	at com.aptana.core.util.ProcessUtil.runInBackground(ProcessUtil.java:120)
+	at com.aptana.js.internal.core.node.NodeJS.runInBackground(NodeJS.java:74)
+	at com.aptana.js.internal.core.node.NodePackageManager.runInBackground(NodePackageManager.java:765)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:528)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:709)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:684)
+	at com.aptana.js.internal.core.build.NodeJSSourceContributor.getBuildPathEntries(NodeJSSourceContributor.java:41)
+	at com.aptana.buildpath.core.BuildPathManager.getDynamicBuildPaths(BuildPathManager.java:312)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:216)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:291)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getIndices(JSIndexQueryHelper.java:120)
+	at com.aptana.js.core.index.JSIndexQueryHelper.<init>(JSIndexQueryHelper.java:95)
+	at com.aptana.editor.js.internal.JSModelUtil.createQueryHelper(JSModelUtil.java:100)
+	at com.aptana.editor.js.internal.JSModelUtil.getProperties(JSModelUtil.java:38)
+	at com.aptana.editor.js.text.JSTextHover.getHoverInfo2(JSTextHover.java:71)
+	at com.aptana.editor.common.CommonSourceViewerConfiguration$TextHover.getHoverInfo2(CommonSourceViewerConfiguration.java:674)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2014-10-17 18:29:53.917
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:529)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:709)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:684)
+	at com.aptana.js.internal.core.build.NodeJSSourceContributor.getBuildPathEntries(NodeJSSourceContributor.java:41)
+	at com.aptana.buildpath.core.BuildPathManager.getDynamicBuildPaths(BuildPathManager.java:312)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:216)
+	at com.aptana.buildpath.core.BuildPathManager.getBuildPaths(BuildPathManager.java:291)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getIndices(JSIndexQueryHelper.java:120)
+	at com.aptana.js.core.index.JSIndexQueryHelper.<init>(JSIndexQueryHelper.java:95)
+	at com.aptana.editor.js.internal.JSModelUtil.createQueryHelper(JSModelUtil.java:100)
+	at com.aptana.editor.js.internal.JSModelUtil.getProperties(JSModelUtil.java:38)
+	at com.aptana.editor.js.text.JSTextHover.getHoverInfo2(JSTextHover.java:71)
+	at com.aptana.editor.common.CommonSourceViewerConfiguration$TextHover.getHoverInfo2(CommonSourceViewerConfiguration.java:674)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2014-10-17 19:57:00.307 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/caseymillstein/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/caseymillstein/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-10-17 19:57:02.541
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-17 19:57:02.978
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-10-17 19:57:03.102
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 19:57:03.103
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 19:57:03.103
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+!SESSION 2014-10-17 21:30:59.138 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/caseymillstein/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/caseymillstein/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-17 21:31:01.351
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-10-17 21:31:01.438
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 21:31:01.438
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-10-17 21:31:01.438
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'

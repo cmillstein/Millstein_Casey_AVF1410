@@ -21,6 +21,8 @@ if (Ti.Geolocation.locationServicesEnabled) {
     alert('Please enable location services');
 }
 
+
+/*
 var image = Ti.UI.createImageView({
 	top: "15%"
 });
@@ -38,26 +40,76 @@ exports.imageThree = imageThree;
 
 var weekdayOne = Ti.UI.createLabel({
 
-});
-exports.weekdayOne = weekdayOne;
+});*/
 
-var success = function(){
+
+var dayHolder = Ti.UI.createLabel({
+	layout: 'horizontal',
+	width: "100%"
+});
+var dayOptions = {
+	borderColor: "#000",
+	borderWidth: 3,
+	left: "10dp",
+	width: "22%",
+	height: "20%",
+	layout: "vertical",
+	// height: "55%",
+	// left: "25dp"
+	
+};
+
+var imageOptions = {
+	// top: "15%"
+};
+var dayLabelOptions = {
+	top: "8dp",
+	// width: Ti.UI.SIZE
+};
+
+// exports.weekdayOne = weekdayOne;
+
+var days = [];
+
+var success = function(days){
 	var getData = JSON.parse(this.responseText);
-	for(var i=0; i<getData.forecast.simpleforecast.forecastday.length; i++){
-		image.setImage(getData.forecast.simpleforecast.forecastday[i].icon_url);
-		imageTwo.setImage(getData.forecast.simpleforecast.forecastday[i].icon_url);
-		imageThree.setImage(getData.forecast.simpleforecast.forecastday[i].icon_url);
-		weekdayOne.setText(getData.forecast.simpleforecast.forecastday[i].title);
+	var dataData = getData.forecast.simpleforecast.forecastday;
+	// alert(dataData.length);
+	for(var i=0; i<dataData.length; i++){
+		var day = Ti.UI.createLabel(dayOptions);
+		var image = Ti.UI.createImageView(imageOptions);
+		var dayLabel = Ti.UI.createLabel(dayLabelOptions);
+		var conditionsLabel = Ti.UI.createLabel(dayLabelOptions);
+		var highLabel = Ti.UI.createLabel(dayLabelOptions);
+		var lowLabel = Ti.UI.createLabel(dayLabelOptions);
+		var aveWindLabel = Ti.UI.createLabel(dayLabelOptions);
+		image.setImage(dataData[i].icon_url);
+		dayLabel.setText(dataData[i].date.weekday);
+		conditionsLabel.setText(dataData[i].conditions);
+		highLabel.setText("High: "+ dataData[i].high.fahrenheit);
+		lowLabel.setText("Low: "+ dataData[i].low.fahrenheit);
+		aveWindLabel.setText("Wind: "+ dataData[i].avewind.dir +" "+ dataData[i].avewind.mph +" mph");
+		// alert(dataData[i].date.weekday);
+		
+		
+		day.add(image);
+		day.add(dayLabel);
+		day.add(conditionsLabel);
+		day.add(highLabel);
+		day.add(lowLabel);
+		day.add(aveWindLabel);
+		// exports.days[i] = day;
+		dayHolder.add(day);
+		// days[i]=day;
 	}
 
 };
 
+mainWin.add(dayHolder);
 
 var error = function(){
 	alert("Oops, something went wrong!");
 };
-
-
 
 
 

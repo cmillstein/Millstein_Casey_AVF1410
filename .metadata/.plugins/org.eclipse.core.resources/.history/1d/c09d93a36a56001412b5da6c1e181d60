@@ -1,0 +1,89 @@
+//API
+var url = "http://api.wunderground.com/api/4c3684666a48c28f/forecast/conditions/q/FL/Coconut_Creek.json";
+
+
+
+//geolocation
+if (Ti.Geolocation.locationServicesEnabled) {
+    Ti.Geolocation.purpose = 'Get Current Location';
+    Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
+    Ti.Geolocation.distanceFilter = 10;
+    Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
+
+    Ti.Geolocation.addEventListener('location', function(e) {
+        if (e.error) {
+            alert('Error: ' + e.error);
+        } else {
+            Ti.API.info(e.coords);
+        }
+    });
+} else {
+    alert('Please enable location services');
+}
+
+
+
+var image = Ti.UI.createImageView({
+	top: "15%"
+});
+exports.image = image;
+
+var imageTwo = Ti.UI.createImageView({
+	top: "15%"
+});
+exports.imageTwo = imageTwo;
+
+var imageThree = Ti.UI.createImageView({
+	top: "15%"
+});
+exports.imageThree = imageThree;
+
+var weekdayOne = Ti.UI.createLabel({
+
+});
+
+var imageOptions = {
+	top: "15%"
+};
+var dayOptions = {
+	top: "20%"
+};
+
+exports.weekdayOne = weekdayOne;
+
+var success = function(exports){
+	var getData = JSON.parse(this.responseText);
+	var data = getData.forecast.simpleforecast;
+	for(var i=0; i<data.length; i++){
+		var image = Ti.UI.createImageView(imageOptions);
+		var dayLabel = Ti.UI.createLabel(dayOptions);
+		image.setImage(data[i].icon_url);
+		dayLabel.setText(data[i].date.weekday);
+		exports.day.i.image = image;
+		exports.day.i.dayLabel = dayLabel;
+	}
+
+};
+
+
+
+
+var error = function(){
+	alert("Oops, something went wrong!");
+};
+
+
+
+
+
+var client = Ti.Network.createHTTPClient({
+	onload: success,
+	onerror: error,
+	timeout: 5000
+});
+
+
+
+client.open("GET", url);
+
+client.send();
