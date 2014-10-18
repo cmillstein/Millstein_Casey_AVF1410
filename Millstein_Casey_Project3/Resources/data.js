@@ -50,10 +50,11 @@ var dayHolder = Ti.UI.createLabel({
 var dayOptions = {
 	borderColor: "#000",
 	borderWidth: 3,
-	left: "10dp",
+	left: "17dp",
 	width: "22%",
-	height: "20%",
+	height: "75%",
 	layout: "vertical",
+	top: "10%"
 	// height: "55%",
 	// left: "25dp"
 	
@@ -63,7 +64,7 @@ var imageOptions = {
 	// top: "15%"
 };
 var dayLabelOptions = {
-	top: "8dp",
+	top: "45dp",
 	// width: Ti.UI.SIZE
 };
 
@@ -88,7 +89,7 @@ var success = function(days){
 		conditionsLabel.setText(dataData[i].conditions);
 		highLabel.setText("High: "+ dataData[i].high.fahrenheit);
 		lowLabel.setText("Low: "+ dataData[i].low.fahrenheit);
-		aveWindLabel.setText("Wind: "+ dataData[i].avewind.dir +" "+ dataData[i].avewind.mph +" mph");
+		aveWindLabel.setText("Wind: "+ dataData[i].avewind.dir +" @ "+ dataData[i].avewind.mph +" mph");
 		// alert(dataData[i].date.weekday);
 		
 		

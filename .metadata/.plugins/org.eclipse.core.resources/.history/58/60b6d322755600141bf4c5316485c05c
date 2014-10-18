@@ -1,0 +1,34 @@
+var app = require("app");
+var data = require("data");
+var camera = require("camera");
+
+var dayHolder = Ti.UI.createLabel({
+	layout: 'horizontal',
+	width: "100%"
+});
+exports.dayHolder = dayHolder;
+
+var dayOptions = {
+	borderColor: "#000",
+	borderWidth: 3,
+	left: "10dp",
+	width: "22%",
+	height: Ti.UI.SIZE,
+	layout: "vertical",
+	// height: "55%",
+	// left: "25dp"
+	
+};
+exports.dayOptions = dayOptions;
+
+var imageOptions = {
+	// top: "15%"
+};
+
+exports.imageOptions = imageOptions;
+
+var dayLabelOptions = {
+	top: "8dp",
+	// width: Ti.UI.SIZE
+};
+exports.imageOptions = imageOptions;
