@@ -1,0 +1,28 @@
+
+var logInWin = Ti.UI.createWindow({
+	backgroundImage: "mainwindow.png",
+	title: "Welcome!"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: logInWin
+});
+
+var tabWindow = Ti.UI.createWindow({
+	backgroundImage: "mainwindow.png"
+});
+
+var submitButton = Ti.UI.createLabel({
+	borderColor: "#000",
+	borderWidth: 3,
+	text: "Sign in"
+});
+
+submitButton.addEventListener("click", function(){
+	tabWindow.openwindow;
+});
+
+
+
+logInWin.add(submitButton);
+navWindow.open();

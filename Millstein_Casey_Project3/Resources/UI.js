@@ -17,7 +17,7 @@ var dayOptions = {
 	borderWidth: 3,
 	left: "10dp",
 	width: "22%",
-	height: Ti.UI.SIZE,
+	//height: Ti.UI.SIZE,
 	layout: "vertical",
 	// height: "55%",
 	// left: "25dp"

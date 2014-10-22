@@ -1,6 +1,6 @@
 var mainWin = Ti.UI.createWindow({
 	title: "Welcome!",
-	backgroundImage: "weatherbackground.png"
+	backgroundImage: "weatherbackground.png",
 });
 
 var ui = require("UI");

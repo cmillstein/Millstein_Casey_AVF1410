@@ -1,6 +1,8 @@
 =run
 Android\ Emulator\ Process\:ConsoleLogLevel=Info
-LAST_LAUNCH_TIMESTAMP=1413656384056
+CarApp\:launchMode=run
+CarApp\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch 64-bit)
+LAST_LAUNCH_TIMESTAMP=1414019449808
 Millstein_Casey_Project1\:launchMode=run
 Millstein_Casey_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.run.device.launchShortcut.0a05c35b2b8cf7c5e735f1d0f9ed5f1745ea624c
 Millstein_Casey_Project1IPAD\:launchMode=run
@@ -16,3 +18,5 @@ TEST\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.laun
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103
+testest\:launchMode=run
+testest\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut

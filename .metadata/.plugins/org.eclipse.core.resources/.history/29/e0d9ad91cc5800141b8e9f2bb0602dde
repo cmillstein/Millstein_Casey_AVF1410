@@ -1,0 +1,34 @@
+
+var logInWin = Ti.UI.createWindow({
+	backgroundImage: "mainwindow.png",
+	title: "Welcome!"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: logInWin
+});
+
+
+var submitButton = Ti.UI.createLabel({
+	borderColor: "#000",
+	borderWidth: 3,
+	backgroundColor: "#fff",
+	height: 30,
+	width: 10,
+	textAlign: "center",
+	text: "Sign in",
+	font: {fontWeight: "bold", fontFamily: "Verdana"},
+	bottom: "20%"
+});
+
+submitButton.addEventListener("click", function(){
+	var tabWindow = Ti.UI.createWindow({
+	backgroundImage: "mainwindow.png"
+	});
+	tabWindow.open();
+});
+
+
+
+logInWin.add(submitButton);
+navWindow.open();
