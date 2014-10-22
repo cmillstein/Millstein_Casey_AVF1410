@@ -99,7 +99,6 @@ var client = Ti.Network.createHTTPClient({
 
 
 if (Ti.Network.online) {
-		Ti.Geolocation.purpose = "Your location is needed for the best experience.";
 		Ti.Geolocation.getCurrentPosition(function(e) {
 			lng = e.coords.longitude;
 			lat = e.coords.latitude;
