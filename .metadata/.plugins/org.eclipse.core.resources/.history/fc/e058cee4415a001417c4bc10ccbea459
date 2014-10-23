@@ -22,25 +22,9 @@ if (Ti.Geolocation.locationServicesEnabled) {
 }
 
 
-/*
-var image = Ti.UI.createImageView({
-	top: "15%"
-});
-exports.image = image;
 
-var imageTwo = Ti.UI.createImageView({
-	top: "15%"
-});
-exports.imageTwo = imageTwo;
 
-var imageThree = Ti.UI.createImageView({
-	top: "15%"
-});
-exports.imageThree = imageThree;
 
-var weekdayOne = Ti.UI.createLabel({
-
-});*/
 
 
 var dayHolder = Ti.UI.createLabel({
@@ -50,32 +34,29 @@ var dayHolder = Ti.UI.createLabel({
 var dayOptions = {
 	borderColor: "#000",
 	borderWidth: 3,
-	left: "10dp",
+	left: "17dp",
 	width: "22%",
-	height: Ti.UI.SIZE,
+	height: "75%",
 	layout: "vertical",
-	// height: "55%",
-	// left: "25dp"
-	
+	top: "10%"
+
 };
 
 var imageOptions = {
-	// top: "15%"
 };
 var dayLabelOptions = {
-	top: "8dp",
-	// width: Ti.UI.SIZE
+	top: "45dp",
+	font: {fontSize: "22dp", fontWeight: "bold", fontFamily: "Comic Sans"},
+	color: "#999999"
 };
 
-// exports.weekdayOne = weekdayOne;
-
+//array
 var days = [];
 
+// JSON data function (looping through data)
 var success = function(days){
-	alert('success Yo!');
 	var getData = JSON.parse(this.responseText);
 	var dataData = getData.forecast.simpleforecast.forecastday;
-	// alert(dataData.length);
 	for(var i=0; i<dataData.length; i++){
 		var day = Ti.UI.createLabel(dayOptions);
 		var image = Ti.UI.createImageView(imageOptions);
@@ -89,14 +70,16 @@ var success = function(days){
 		conditionsLabel.setText(dataData[i].conditions);
 		highLabel.setText("High: "+ dataData[i].high.fahrenheit);
 		lowLabel.setText("Low: "+ dataData[i].low.fahrenheit);
-		aveWindLabel.setText("Ave Wind: "+ dataData[i].avewind.dir +" "+ dataData[i].avewind.mph +" mph");
-		// alert(dataData[i].date.weekday);
+		aveWindLabel.setText("Wind: "+ dataData[i].avewind.dir +" @ "+ dataData[i].avewind.mph +" mph");
 		
-		
-		day.add(image, dayLabel, conditionsLabel, highLabel, lowLabel, aveWindLabel);
-		// exports.days[i] = day;
+	//ADDING LABELS TO VIEWS	
+		day.add(image);
+		day.add(dayLabel);
+		day.add(conditionsLabel);
+		day.add(highLabel);
+		day.add(lowLabel);
+		day.add(aveWindLabel);
 		dayHolder.add(day);
-		// days[i]=day;
 	}
 
 };
@@ -108,8 +91,6 @@ var error = function(){
 };
 
 
-console.log('ma');
-
 
 var client = Ti.Network.createHTTPClient({
 	onload: success,
@@ -118,6 +99,16 @@ var client = Ti.Network.createHTTPClient({
 });
 
 
+if (Ti.Network.online) {
+		Ti.Geolocation.getCurrentPosition(function(e) {
+			lng = e.coords.longitude;
+			lat = e.coords.latitude;
+		});
+
+	} else {
+
+		alert("Please sign into a network to continue");
+};	
 
 client.open("GET", url);
 

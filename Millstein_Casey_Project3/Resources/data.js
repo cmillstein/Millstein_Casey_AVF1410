@@ -1,5 +1,3 @@
-//API
-var url = "http://api.wunderground.com/api/4c3684666a48c28f/forecast/conditions/q/FL/Coconut_Creek.json";
 
 
 
@@ -46,7 +44,8 @@ var imageOptions = {
 };
 var dayLabelOptions = {
 	top: "45dp",
-	font: {fontWeight: "bold", fontFamily: "Verdana"}
+	font: {fontSize: "22dp", fontWeight: "bold", fontFamily: "Comic Sans"},
+	color: "#00006B"
 };
 
 //array
@@ -99,17 +98,22 @@ var client = Ti.Network.createHTTPClient({
 
 
 if (Ti.Network.online) {
-		Ti.Geolocation.purpose = "Your location is needed for the best experience.";
 		Ti.Geolocation.getCurrentPosition(function(e) {
 			lng = e.coords.longitude;
 			lat = e.coords.latitude;
+			//API
+			var url = "http://api.wunderground.com/api/4c3684666a48c28f/forecast/conditions/q/FL/Coconut_Creek.json";
+			var client = Ti.Network.createHTTPClient({
+			onload: success,
+			onerror: error,
+			timeout: 5000
 		});
+		client.open("GET", url);
+		client.send();
+});
 
 	} else {
 
 		alert("Please sign into a network to continue");
 };	
 
-client.open("GET", url);
-
-client.send();

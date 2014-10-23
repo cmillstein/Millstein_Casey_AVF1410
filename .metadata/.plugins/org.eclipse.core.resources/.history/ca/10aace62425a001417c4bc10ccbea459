@@ -9,7 +9,6 @@ var wunderground = Ti.UI.createLabel({
 	height: "12%",
 	top: "2%",
 	font: {fontSize: "38dp", fontWeight: "bold", fontFamily: "verdana"},
-	color: "#ffffff"
 	
 });
 
