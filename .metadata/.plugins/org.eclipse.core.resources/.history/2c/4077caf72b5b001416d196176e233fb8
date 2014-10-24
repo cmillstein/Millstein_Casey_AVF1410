@@ -26,12 +26,11 @@ if (Ti.Geolocation.locationServicesEnabled) {
 
 
 var dayHolder = Ti.UI.createLabel({
-	//backgroundImage: "blurred.png",
+	backgroundImage: "blurred.png",
 	layout: 'horizontal',
 	width: "100%"
 });
 var dayOptions = {
-		backgroundImage: "blurred.png",
 	borderColor: "#000",
 	borderWidth: 3,
 	left: "17dp",
